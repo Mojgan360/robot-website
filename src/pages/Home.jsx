@@ -27,7 +27,8 @@ const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: minmax(50px, auto);
+  grid-template-rows: minmax(50px, auto) 1fr;
+  /* grid-auto-rows: 250px; */
 `;
 
 const ImageHero = styled.div`
@@ -101,7 +102,7 @@ const BOX4 = styled.div`
   width: 100%;
   height: 150px;
   margin-top: -70px;
-  grid-column: 3 / 23;
+  grid-column: 2 / 24;
   grid-row: 6 / 7;
   background-color: #1a1a1a;
   position: relative;
@@ -120,7 +121,7 @@ const BOX5 = styled.div`
   width: 100%;
   height: 600px;
   margin-top: 5px;
-  grid-column: 3 / 23;
+  grid-column: 2 / 24;
   grid-row: 7 / 8;
   background-color: #1a1a1a;
   display: grid;
@@ -281,7 +282,7 @@ const BOX6 = styled.div`
   background-color: #1a1a1a;
   width: 100%;
   padding: 50px;
-  grid-column: 3/ 23;
+  grid-column: 2/ 24;
   grid-row: 8 / 9;
   height: 500px;
   display: grid;
@@ -373,9 +374,9 @@ const Box9 = styled.div`
   background-color: #1a1a1a;
   width: 100%;
   margin-top: -70px;
-  grid-column: 3/ 23;
+  grid-column: 2/ 24;
   grid-row: 10 / 11;
-  height: 600px;
+  height: 500px;
   display: grid;
   position: relative;
   z-index: -1;
@@ -390,7 +391,7 @@ const Box9 = styled.div`
     text-align: right;
     color: #fff;
     position: absolute;
-    bottom: 200px;
+    bottom: 70px;
     right: 100px;
   }
   p {
@@ -409,33 +410,94 @@ const Box9 = styled.div`
 `;
 
 const Box10 = styled.div`
-  /* background-color: gold; */
+  background-color: #b9dfdf;
   width: 100%;
   /* margin-top: -70px; */
-  grid-column: 3/ 23;
+  grid-column: 2/ 24;
   grid-row: 11 / 12;
-  height: 600px;
-  position: relative;
+  height: 650px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 
   img {
+    grid-column: 1/ 4;
+    grid-row: 1;
     width: 435px;
     height: 451px;
-    position: absolute;
-    top: -100px;
+    margin-top: -70px;
+    margin-left: 50px;
+    z-index: 99;
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 45px;
+    line-height: 3.5rem;
+    margin-bottom: 10px;
+  }
+  p {
+    /* padding: 0 25px 25px 0; */
+    font-weight: 100;
+    font-size: 20px;
   }
   .text-box {
-    position: absolute;
-    height: 300px;
-    width: 400px;
-    right: 100px;
+    grid-column: 3/ 7;
+    grid-row: 1;
+    padding: 50px 50px 50px 170px;
+    margin-right: 50px;
+    position: relative;
+    height: 650px;
+
+    background-color: #fff;
   }
-  img::after {
+  .text-box::after {
     content: "";
     position: absolute;
-    height: 70px;
-    width: 10px;
+    top: -200px;
+    right: 0;
+    height: 400px;
+    width: 20px;
+    background-color: #aea16a;
+    z-index: 999;
+  }
+`;
+// background-color: #b9dfdf;
 
-    background-color: red;
+const Box11 = styled.div`
+  background-color: #ccc;
+  width: 100%;
+  /* margin-top: -70px; */
+  grid-column: 2/ 24;
+  grid-row: 13 / 14;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 423px 100px;
+  img {
+    display: grid;
+    justify-self: end;
+    width: 150px;
+    height: 150px;
+  }
+  h1 {
+    text-align: right;
+    font-weight: 800;
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  h4 {
+    text-align: right;
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .box11 {
+    grid-column: 2 /3;
+    grid-row: span 1 / 1;
+    background-color: #b9dfdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* place-self: center center; */
   }
 `;
 
@@ -589,8 +651,23 @@ function Home() {
         <img src={image_8} alt="image8" />
         <div className="text-box">
           <h1>Artificial Intelligence Robots And The Future Of Work</h1>
+          <p>
+            The number of robots in the world today is approaching 1,000,000,
+            with almost half that number in Japan and just 15% in the US. A
+            couple of decades ago, 90% of robots were used in car manufacturing,
+            typically on assembly lines doing a variety of repetitive tasks.
+            Today only 50% are in automobile plants, with the other half spread
+            out among other factories, and many other industries.
+          </p>
         </div>
       </Box10>
+      <Box11>
+        <img src={hash2} alt="hash2" />
+        <div className="box11">
+          <h4>AI PERSPECTIVES</h4>
+          <h1>Robots and AI</h1>
+        </div>
+      </Box11>
     </Container>
   );
 }
