@@ -18,6 +18,7 @@ import image_5 from "../assets/images/image_5.jpeg";
 import image_6 from "../assets/images/image_6.jpeg";
 import image_7 from "../assets/images/image_7.png";
 import image_8 from "../assets/images/image_8.jpeg";
+import image_9 from "../assets/images/image_9.jpeg";
 
 // import "./home.css";
 //color: #aea16a !important;
@@ -478,16 +479,13 @@ const Box11 = styled.div`
     height: 150px;
   }
   h1 {
-    text-align: right;
     font-weight: 800;
     font-size: 35px;
-    margin-bottom: 30px;
   }
   h4 {
     text-align: right;
     font-weight: 400;
     font-size: 25px;
-    margin-bottom: 30px;
   }
   .box11 {
     grid-column: 2 /3;
@@ -499,6 +497,16 @@ const Box11 = styled.div`
     justify-content: center;
     /* place-self: center center; */
   }
+`;
+
+const Box12 = styled.div`
+  background-color: #fff;
+  width: 100%;
+  /* margin-top: -70px; */
+  grid-column: 2/ 24;
+  grid-row: 14 / 15;
+  height: 80vh;
+  display: grid;
 `;
 
 function Home() {
@@ -668,6 +676,7 @@ function Home() {
           <h1>Robots and AI</h1>
         </div>
       </Box11>
+      <Box12></Box12>
     </Container>
   );
 }
