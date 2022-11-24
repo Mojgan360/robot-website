@@ -1,0 +1,63 @@
+.container {
+  width: 100vw;
+  max-width: 1400px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+}
+.imageWrapper {
+  width: 770px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.imageWrapper > img {
+  width: 770px;
+  height: 430px;
+  position: absolute;
+  object-fit: contain;
+  top: 50px;
+}
+.imageWrapper::before {
+  content: "";
+  position: absolute;
+  background-color: #b9dfdf;
+  width: 400px;
+  height: 723px;
+  right: 100px;
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #b9dfdf;
+  width: 100px;
+  height: 79px;
+  left: -10px;
+  top: 50px;
+  z-index: -1;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  background-color: blueviolet;
+
+  white-space: nowrap;
+  /* margin: 0 2.3em; */
+  line-height: 1.8em;
+  text-align: center;
+  flex-direction: column;
+  color: #fff;
+
+  z-index: 5;
+}
+.title h1 {
+  width: 300px;
+}
