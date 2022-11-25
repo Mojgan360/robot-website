@@ -28,15 +28,14 @@ const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: minmax(50px, auto) 1fr;
-  /* grid-auto-rows: 250px; */
+  /* grid-template-rows: minmax(50px, auto) 1fr; */
+  grid-auto-rows: 70px;
 `;
 
 const ImageHero = styled.div`
-  background-color: pink;
   width: 100%;
   grid-column: 3 / 22;
-  grid-row: 2 / 2;
+  grid-row: 2 / 9;
 
   display: grid;
   justify-self: end;
@@ -44,16 +43,16 @@ const ImageHero = styled.div`
   z-index: 1;
 
   img {
-    width: 918px;
-    height: 480px;
-    /* object-fit: contain; */
+    width: 920px;
+    height: 500px;
+    object-fit: contain;
   }
 `;
 
 const TitleHero = styled.div`
   width: 100%;
   grid-column: 13 / 21;
-  grid-row: 2/3;
+  grid-row: 2/9;
   color: #fff;
   margin: 30px;
   z-index: 3;
@@ -76,54 +75,51 @@ const TitleHero = styled.div`
 `;
 
 const BOX1 = styled.div`
-  width: 100%;
-  height: 50px;
-
   grid-column: 8 / 22;
-  grid-row: 1 / 1;
+  grid-row: 1 / 2;
   background-color: #b9dfdf;
 `;
 const BOX2 = styled.div`
   width: 100%;
-  height: 317px;
   grid-column: 8/ 22;
-  grid-row: 3/4;
+  grid-row: 8/18;
   background-color: #b9dfdf;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  img {
+    width: 538px;
+    height: 317px;
+    grid-column: 1/ 3;
+    justify-self: end;
+    margin-right: -25px;
+    z-index: 5;
+  }
 `;
+
 const BOX3 = styled.div`
   width: 100%;
-  height: 846px;
   position: relative;
   grid-column: 8 / 22;
-  grid-row: 4 / 5;
+  grid-row: 13 / 25;
   background-color: #b9dfdf;
 `;
 const BOX4 = styled.div`
-  width: 100%;
-  height: 150px;
-  margin-top: -70px;
   grid-column: 2 / 24;
-  grid-row: 6 / 7;
+  grid-row: 24/ 27;
   background-color: #1a1a1a;
   position: relative;
   z-index: -1;
-`;
-const Image2 = styled.div`
-  width: 100%;
-  position: absolute;
-  left: 0px;
-
   img {
-    width: 200px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
   }
 `;
+
 const BOX5 = styled.div`
-  width: 100%;
-  height: 600px;
-  margin-top: 5px;
   grid-column: 2 / 24;
-  grid-row: 7 / 8;
+  grid-row: 27/ 30;
   background-color: #1a1a1a;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -197,12 +193,10 @@ const TitleHuman = styled.div`
   background-color: #fff;
   color: #111111;
   width: 100%;
-  height: 700px;
+  margin-top: 35px;
   grid-column: 3 / 13;
-  grid-row: 4/ 5;
+  grid-row: 11 / 20;
   z-index: 15;
-  padding: 50px 25px;
-  margin-top: -80px;
 
   h2 {
     font-weight: 800;
@@ -225,15 +219,19 @@ const TitleHuman = styled.div`
     outline: none;
     border: none;
     background-color: #b9dfdf;
+
+    margin-top: 30px;
+
     padding: 0.7rem;
     cursor: pointer;
   }
 `;
 
 const TitleFUture = styled.div`
-  margin-top: 50px;
+  /* margin-top: 25px; */
+  padding: 25px 25px 10px 0px;
   position: absolute;
-  width: 400px;
+  width: 360px;
   right: 0;
 
   h1 {
@@ -252,9 +250,8 @@ const ImagesGroup = styled.div`
   background-color: #fff;
   height: 300px;
   width: 300px;
-  margin-top: 330px;
   grid-column: 17/23;
-  grid-row: 4/ 5;
+  grid-row: 18/ 30;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: repeat(3, 1fr);
@@ -263,29 +260,28 @@ const ImagesGroup = styled.div`
   z-index: 5;
   img {
     width: 150px;
-    /* object-fit: contain; */
+    object-fit: contain;
   }
 `;
 const ImagrHash = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
+  grid-column: 7/ 13;
+  grid-row: 20 / 25;
   display: grid;
   justify-self: end;
 
   img {
-    width: 225px;
+    z-index: 1;
+    width: 220px;
   }
 `;
 
 const BOX6 = styled.div`
   background-color: #1a1a1a;
-  width: 100%;
+
   padding: 50px;
   grid-column: 2/ 24;
-  grid-row: 8 / 9;
-  height: 500px;
+  grid-row: 36/ 42;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 70px;
@@ -294,11 +290,8 @@ const BOX6 = styled.div`
 
 const BOX7 = styled.div`
   background-color: #b9dfdf;
-  width: 100%;
-  margin-top: -70px;
   grid-column: 8/ 22;
-  grid-row: 9 / 10;
-  height: 850px;
+  grid-row: 41/ 51;
   position: relative;
 
   p {
@@ -306,78 +299,61 @@ const BOX7 = styled.div`
     text-align: center;
     position: absolute;
     font-style: italic;
-    font-weight: 500;
-    bottom: 70px;
+    font-weight: 800;
+    bottom: 50px;
   }
 `;
 
 const Box8 = styled.div`
-  width: 100%;
   grid-column: 3/ 23;
-  grid-row: 9 / 10;
-  height: 500px;
+  grid-row: 42/ 44;
   display: grid;
+
+  grid-template-columns: 120px repeat(3, 1fr);
+  justify-items: center;
+  justify-content: space-between;
+  align-items: top;
   z-index: 99;
 `;
 
 const ImageText = styled.div`
-  grid-column: 2/ 3;
-  grid-row: 8;
-  margin-top: 70px;
-
   img {
     width: 100px;
     object-fit: cover;
   }
 `;
 const Image4 = styled.div`
-  margin-top: 50px;
-  grid-column: 8 / 12;
-  grid-row: 8;
-  display: grid;
+  margin-top: 140px;
   img {
-    justify-self: end;
-    /* align-self: center; */
-    width: 350px;
-    height: 530px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     object-position: 25% 0;
   }
 `;
 const Image5 = styled.div`
-  margin-top: 100px;
-  grid-column: 3/ 6;
-  grid-row: 8;
-  display: grid;
+  margin-top: 70px;
   img {
-    justify-self: start;
-
     width: 250px;
-    height: 400px;
+    height: 320px;
     object-fit: cover;
     object-position: 18% 0;
   }
 `;
 const Image6 = styled.div`
-  margin-top: 150px;
-  grid-column: 6/ 8;
-  grid-row: 8;
-  display: grid;
+  margin-top: 100px;
   img {
-    justify-self: center;
-    width: 150px;
-    height: 200px;
+    /* justify-self: center; */
+    width: 180px;
+    height: 250px;
     object-fit: cover;
     object-position: 18% 0;
   }
 `;
 const Box9 = styled.div`
   background-color: #1a1a1a;
-  width: 100%;
-  margin-top: -70px;
   grid-column: 2/ 24;
-  grid-row: 10 / 11;
-  height: 500px;
+  grid-row: 50 / 58;
   display: grid;
   position: relative;
   z-index: -1;
@@ -397,6 +373,7 @@ const Box9 = styled.div`
   }
   p {
     margin: 0 70px;
+    padding: 0 30px;
     color: #fff;
     font-weight: 100;
     font-size: 20px;
@@ -412,11 +389,8 @@ const Box9 = styled.div`
 
 const Box10 = styled.div`
   background-color: #b9dfdf;
-  width: 100%;
-  /* margin-top: -70px; */
   grid-column: 2/ 24;
-  grid-row: 11 / 12;
-  height: 650px;
+  grid-row: 58/ 69;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
@@ -433,21 +407,20 @@ const Box10 = styled.div`
     font-weight: 800;
     font-size: 45px;
     line-height: 3.5rem;
-    margin-bottom: 10px;
+    margin: 20px 0;
   }
   p {
-    /* padding: 0 25px 25px 0; */
+    padding-top: 10px;
     font-weight: 100;
     font-size: 20px;
   }
   .text-box {
+    /* height: 700px; */
     grid-column: 3/ 7;
     grid-row: 1;
-    padding: 50px 50px 50px 170px;
+    padding: 50px 50px 0 170px;
     margin-right: 50px;
     position: relative;
-    height: 650px;
-
     background-color: #fff;
   }
   .text-box::after {
@@ -461,22 +434,20 @@ const Box10 = styled.div`
     z-index: 999;
   }
 `;
-// background-color: #b9dfdf;
 
 const Box11 = styled.div`
-  background-color: #ccc;
-  width: 100%;
-  /* margin-top: -70px; */
+  /* background-color: #ccc; */
   grid-column: 2/ 24;
-  grid-row: 13 / 14;
-  height: 50vh;
+  grid-row: 68/ 74;
   display: grid;
   grid-template-columns: 1fr 423px 100px;
+  z-index: 999;
   img {
+    margin-top: 70px;
     display: grid;
     justify-self: end;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
   }
   h1 {
     font-weight: 800;
@@ -500,13 +471,36 @@ const Box11 = styled.div`
 `;
 
 const Box12 = styled.div`
-  background-color: #fff;
-  width: 100%;
-  /* margin-top: -70px; */
-  grid-column: 2/ 24;
-  grid-row: 14 / 15;
-  height: 80vh;
+  grid-column: 2/ 20;
+  grid-row: 73 / 84;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  z-index: 1000;
+  .box12 {
+    padding: 40px;
+    background-color: #fff;
+  }
+  p {
+    font-style: italic;
+    font-weight: 100;
+    font-size: 19px;
+  }
+  img {
+    width: 450px;
+    height: 454px;
+  }
+  button {
+    width: 150px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    background-color: #b9dfdf;
+    padding: 0.7rem;
+    margin-top: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+  }
 `;
 
 function Home() {
@@ -537,20 +531,9 @@ function Home() {
         <button>LEARN MORE</button>
       </TitleHuman>
 
-      <ImagesGroup>
-        <img src={robot} alt="robot" />
-        <img src={robot2} alt="robot2" />
-        <img src={robot2} alt="robot2" />
-        <img src={robot} alt="robot" />
-        <img src={robot2} alt="robot2" />
-        <img src={robot} alt="robot" />
-      </ImagesGroup>
-
       <BOX1></BOX1>
       <BOX2>
-        <Image1>
-          <img src={image_1} alt="image_1" />
-        </Image1>
+        <img src={image_1} alt="image_1" />
       </BOX2>
       <BOX3>
         <TitleFUture>
@@ -560,16 +543,22 @@ function Home() {
             concerned with the looming threat to the workforce...
           </p>
         </TitleFUture>
-        <ImagrHash>
-          <img src={hash1} alt="hash1" />
-        </ImagrHash>
       </BOX3>
+      <ImagrHash>
+        <img src={hash1} alt="hash1" />
+      </ImagrHash>
+      <ImagesGroup>
+        <img src={robot} alt="robot" />
+        <img src={robot2} alt="robot2" />
+        <img src={robot2} alt="robot2" />
+        <img src={robot} alt="robot" />
+        <img src={robot2} alt="robot2" />
+        <img src={robot} alt="robot" />
+      </ImagesGroup>
       <BOX4>
-        {" "}
-        <Image2>
-          <img src={image_2} alt="image_2" />
-        </Image2>
+        <img src={image_2} alt="image_2" />
       </BOX4>
+
       <BOX5>
         <Image3>
           <img src={image_3} alt="happy-man" />
@@ -619,6 +608,7 @@ function Home() {
           </p>
         </div>
       </BOX6>
+
       <BOX7>
         <p>
           Maximum flexibility in production. Relief of employees by performing
@@ -631,15 +621,15 @@ function Home() {
         <ImageText>
           <img src={image_7} alt="image7" />
         </ImageText>
-        <Image4>
-          <img src={image_4} alt="image4" />
-        </Image4>
         <Image5>
           <img src={image_5} alt="image5" />
         </Image5>
         <Image6>
           <img src={image_6} alt="imge6" />
         </Image6>
+        <Image4>
+          <img src={image_4} alt="image4" />
+        </Image4>
       </Box8>
       <Box9>
         <hr />
@@ -676,7 +666,21 @@ function Home() {
           <h1>Robots and AI</h1>
         </div>
       </Box11>
-      <Box12></Box12>
+      <Box12>
+        <div className="box12">
+          <p>
+            How many want to subject themselves to black lung disease and a host
+            of other health problems from that job? This is why coal mining
+            towns are dying out. Young people in these towns are moving on to
+            the brighter job prospects. And technology is taking over what’s
+            left of the mining industry. Green energy is taking over, and with
+            it, a host of new, clean jobs and careers. It’s the march of
+            civilization that will never cease.
+          </p>
+          <button>LEARN MORE</button>
+        </div>
+        <img src={image_9} alt="image9" />
+      </Box12>
     </Container>
   );
 }
