@@ -119,7 +119,7 @@ const BOX4 = styled.div`
 
 const BOX5 = styled.div`
   grid-column: 2 / 24;
-  grid-row: 27/ 30;
+  grid-row: 27/ 36;
   background-color: #1a1a1a;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -177,15 +177,6 @@ const BottomHText = styled.div`
     padding: 0.7rem;
     cursor: pointer;
     margin-left: 30px;
-  }
-`;
-const Image1 = styled.div`
-  position: absolute;
-  right: 0;
-  img {
-    width: 538px;
-    height: 317px;
-    z-index: 1;
   }
 `;
 
@@ -277,21 +268,30 @@ const ImagrHash = styled.div`
 
 const BOX6 = styled.div`
   background-color: #1a1a1a;
-
-  padding: 50px;
+  padding: 30px 60px;
   grid-column: 2/ 24;
-  grid-row: 36/ 42;
+  grid-row: 36/ 43;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 70px;
   color: #fff;
+  h1 {
+    padding: 10px 25px 25px 0;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  p {
+    padding: 0 25px 25px 0;
+    font-weight: 100;
+    font-size: 18px;
+  }
 `;
 
 const BOX7 = styled.div`
   background-color: #b9dfdf;
   grid-column: 8/ 22;
-  grid-row: 41/ 51;
+  grid-row: 42/ 52;
   position: relative;
 
   p {
@@ -306,7 +306,7 @@ const BOX7 = styled.div`
 
 const Box8 = styled.div`
   grid-column: 3/ 23;
-  grid-row: 42/ 44;
+  grid-row: 43/ 45;
   display: grid;
 
   grid-template-columns: 120px repeat(3, 1fr);
@@ -333,6 +333,7 @@ const Image4 = styled.div`
 `;
 const Image5 = styled.div`
   margin-top: 70px;
+
   img {
     width: 250px;
     height: 320px;
@@ -343,7 +344,6 @@ const Image5 = styled.div`
 const Image6 = styled.div`
   margin-top: 100px;
   img {
-    /* justify-self: center; */
     width: 180px;
     height: 250px;
     object-fit: cover;
@@ -353,7 +353,7 @@ const Image6 = styled.div`
 const Box9 = styled.div`
   background-color: #1a1a1a;
   grid-column: 2/ 24;
-  grid-row: 50 / 58;
+  grid-row: 51 / 59;
   display: grid;
   position: relative;
   z-index: -1;
@@ -390,7 +390,7 @@ const Box9 = styled.div`
 const Box10 = styled.div`
   background-color: #b9dfdf;
   grid-column: 2/ 24;
-  grid-row: 58/ 69;
+  grid-row: 59 / 69;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
@@ -407,7 +407,7 @@ const Box10 = styled.div`
     font-weight: 800;
     font-size: 45px;
     line-height: 3.5rem;
-    margin: 20px 0;
+    margin: 10px 0;
   }
   p {
     padding-top: 10px;
@@ -415,10 +415,9 @@ const Box10 = styled.div`
     font-size: 20px;
   }
   .text-box {
-    /* height: 700px; */
     grid-column: 3/ 7;
     grid-row: 1;
-    padding: 50px 50px 0 170px;
+    padding: 25px 50px 0 170px;
     margin-right: 50px;
     position: relative;
     background-color: #fff;
@@ -436,9 +435,8 @@ const Box10 = styled.div`
 `;
 
 const Box11 = styled.div`
-  /* background-color: #ccc; */
   grid-column: 2/ 24;
-  grid-row: 68/ 74;
+  grid-row: 68/ 75;
   display: grid;
   grid-template-columns: 1fr 423px 100px;
   z-index: 999;
@@ -446,8 +444,9 @@ const Box11 = styled.div`
     margin-top: 70px;
     display: grid;
     justify-self: end;
-    width: 170px;
-    height: 170px;
+    width: 250px;
+    height: 250px;
+    opacity: 0.5;
   }
   h1 {
     font-weight: 800;
@@ -472,7 +471,7 @@ const Box11 = styled.div`
 
 const Box12 = styled.div`
   grid-column: 2/ 20;
-  grid-row: 73 / 84;
+  grid-row: 74 / 83;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
@@ -501,6 +500,12 @@ const Box12 = styled.div`
     margin-left: 30px;
     cursor: pointer;
   }
+`;
+const Box13 = styled.div`
+  grid-column: 2/ 24;
+  grid-row: 82/ 83;
+  display: grid;
+  grid-template-columns: 1fr 423px 100px;
 `;
 
 function Home() {
@@ -681,6 +686,7 @@ function Home() {
         </div>
         <img src={image_9} alt="image9" />
       </Box12>
+      <Box13></Box13>
     </Container>
   );
 }
