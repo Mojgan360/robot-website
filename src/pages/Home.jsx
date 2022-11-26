@@ -28,7 +28,6 @@ const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(24, 1fr);
-  /* grid-template-rows: minmax(50px, auto) 1fr; */
   grid-auto-rows: 70px;
 `;
 
@@ -104,6 +103,7 @@ const BOX3 = styled.div`
   background-color: #b9dfdf;
 `;
 const BOX4 = styled.div`
+  margin-bottom: 5px;
   grid-column: 2 / 24;
   grid-row: 24/ 27;
   background-color: #1a1a1a;
