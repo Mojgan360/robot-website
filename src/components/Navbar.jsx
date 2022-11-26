@@ -41,7 +41,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </Logo>
 
-      <Input type="input" placeholder="Search" />
+      <Input type="input" placeholder=" Search" />
       <BarsIcone />
     </Container>
   );
